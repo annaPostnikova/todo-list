@@ -8,7 +8,7 @@ let newItemTemplate = taskTemplate.querySelector('.todo-list-item'); //в это
 
 //функция на появление красной надписи 
 let toggleEmptyListMessage = function () {
-  //если дочерних элементов ноль (т.е. длина HTML коллекции равна нулю), то класс, скрывающий надпись - удаляется
+  //если дочерних элементов ноль (т.е. длина HTML коллекции равна нулю), то класс, скрывающий надпись, удаляется
   if (items.length === 0) {
     emptyListMessage.classList.remove('hidden');
   } else {
