@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="todo">
+        <h1 class="todo-title">Все задачи</h1>
+        <form class="add-form">
+            <input id="new" class="add-form-input" type="text" placeholder="Например, сверстать сайт" required>
+            <button id="add" class="add-form-button" type="submit">Добавить задачу</button>
+        </form>
+        <p class="empty-tasks">Добавьте новые задачи</p>
+
+        <ul id="tasks" class="todo-list">
+            <!--
+            <li class="todo-list-item">
+                <label class="todo-checkbox">
+                    <input class="todo-list-input" type="checkbox">
+                    <div></div>
+                </label>
+                <span class="todo-task">Тут могла быть ваша задача</span>
+                <button class="todo-list-delite">&#10006;</button>
+            </li>
+            -->
+        </ul>
+
+        <template id="task-template">
+            <li class="todo-list-item">
+                <label class="todo-checkbox">
+                    <input class="todo-list-input" type="checkbox">
+                    <div></div>
+                </label>
+                <span class="todo-task"></span>
+                <button class="todo-list-delite">&#10006;</button>
+            </li>
+        </template>
+    </div>
+    <button class="up-button" type="button">↑</button>
+    <script src="script.js"></script> 
+</body>
+</html>

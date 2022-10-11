@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+/*
+#A26D87 #624058 #CFBEB7 #F1EAD8 #E79B9B
+*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(231, 155, 155, 0.5);
+    background-image: url(background.png);
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.todo {
+    padding: 24px;
+
+    background-color: #F1EAD8;
+    width: 50vw;
+    border-radius: 12px;
+
+    box-shadow: 0 0 6px 0 rgb(162, 109, 135);
+}
+
+.todo-title {
+    margin-bottom: 12px;
+    text-align: center;
+
+    color: #624058;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+}
+
+.add-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-form-input {
+    flex-grow: 1;
+
+    box-sizing: border-box;
+    height: auto;
+    margin: 4px 0;
+    padding: 8px;
+
+    font: inherit;
+
+    border: 1px solid #CFBEB7;
+    border-radius: 6px;
+}
+
+.add-form-input:hover {
+    box-shadow: 0 0 4px rgba(98, 64, 88, 0.5);
+}
+
+.add-form-input:focus {
+    border: 1px solid #A26D87;
+    outline: none;
+}
+
+.add-form-button {
+    flex-shrink: 0;
+    padding: 8px;
+    margin: 4px 0 4px 16px;
+    cursor: pointer;
+
+    color: white;
+    font: inherit;
+
+    background-image: linear-gradient(#A26D87, #624058);
+    border: none;
+    border-radius: 6px;
+
+
+    text-shadow: 0 0 2px black;
+    box-shadow: 1px 1px 2px 0 gray;
+}
+
+.add-form-button:hover,
+.add-form-button:focus {
+ background-image: linear-gradient( #624058, #624058);
+  
+}
+
+.add-form-button:active {
+    background-image: linear-gradient(#CFBEB7, #5b5756);
+}
+
+.empty-tasks {
+    color: red;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.todo-checkbox input {
+    display: none;
+}
+
+.todo-checkbox div {
+    height: 14px;
+    width: 14px;
+
+    border: 1px solid #624058;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-checkbox div::after {
+    content: '\2714';
+    color: #624058;
+    display: none;
+}
+
+.todo-checkbox input:checked + div {
+    background-color: rgba(162, 109, 135, 0.5);
+}
+
+.todo-checkbox input:checked + div::after {
+    display: block;
+}
+
+.todo-list-input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.todo-task {
+    margin-left: 8px;
+}
+
+.complete .todo-task {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todo-list-delite {
+    display: none;
+    margin-left: auto;
+    padding: 0 4px;
+
+    color: white;
+
+    background-color: #A26D87;
+    border: none;
+    border-radius: 4px;
+
+    text-shadow: 0 0 2px black;
+    box-shadow: 1px 1px 2px 0 gray;
+
+    cursor: pointer;
+}
+
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    margin: 12px 0;
+
+    font-size: 14px;
+
+    background-image: linear-gradient(#F1EAD8, #dbd8ce);
+    box-shadow: 0 0 1px 0 rgb(231, 155, 155);
+
+    user-select: none;
+}
+.todo-list-item:hover {
+    box-shadow: 0 0 6px 0 rgba(231, 155, 155, 0.5);
+}
+
+.todo-list-item:first-child {
+    margin-top: 6px;
+}
+
+.todo-list-item:last-child {
+    margin-bottom: 6px;
+}
+
+span {
+    display: flex;
+    width: 80%;
+    flex-flow: row wrap;
+}
+
+.todo-list-item:hover .todo-list-delite {
+    display: block;
+}
+
+.todo-list-delite:hover,
+.todo-list-delite:focus {
+  background-color: #624058;
+}
+
+.todo-list-delite:active {
+  background-color: #CFBEB7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.up-button {
+    position: fixed;
+    z-index: 1;
+    padding: 0;
+    bottom: 50px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    border: 4px solid #624058;
+    background-color: #F1EAD8;
+    color: #624058;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+.shown {
+    display: block;
+}
